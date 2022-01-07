@@ -1,0 +1,12 @@
+<h2>{{#if droneFetched}}Modify {{droneFetched.name}}{{else}}Create a new drone{{/if}}</h2>
+
+<form action="{{#if droneFetched}}/drones/{{droneFetched._id}}/edit{{else}}/drones/create{{/if}}" method="POST">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" {{#if droneFetched}} value="{{droneFetched.name}}"{{/if}}>
+<label for="propellers">Propellers</label>
+<input type="number" id="propellers" name="propellers" {{#if droneFetched}} value="{{droneFetched.propellers}}"{{/if}}>
+<label for="maxSpeed">Max speed</label>
+<input type="number" id="maxSpeed" name="maxSpeed" {{#if droneFetched}} value="{{droneFetched.maxSpeed}}"{{/if}}>
+<button>{{#if droneFetched}}Modify{{else}}Create{{/if}}</button>
+</form>
+
