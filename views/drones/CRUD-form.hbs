@@ -1,12 +1,19 @@
-<h2>{{#if droneFetched}}Modify {{droneFetched.name}}{{else}}Create a new drone{{/if}}</h2>
+<div id="crud-main-container">
 
-<form action="{{#if droneFetched}}/drones/{{droneFetched._id}}/edit{{else}}/drones/create{{/if}}" method="POST">
-<label for="name">Name</label>
-<input type="text" id="name" name="name" {{#if droneFetched}} value="{{droneFetched.name}}"{{/if}}>
-<label for="propellers">Propellers</label>
-<input type="number" id="propellers" name="propellers" {{#if droneFetched}} value="{{droneFetched.propellers}}"{{/if}}>
-<label for="maxSpeed">Max speed</label>
-<input type="number" id="maxSpeed" name="maxSpeed" {{#if droneFetched}} value="{{droneFetched.maxSpeed}}"{{/if}}>
-<button>{{#if droneFetched}}Modify{{else}}Create{{/if}}</button>
-</form>
+    <h2>{{#if droneFetched}}Modify {{droneFetched.name}}{{else}}Create a new drone{{/if}}</h2>
+
+    <div id="crud-form-container" class="form-group">
+        <form action="{{#if droneFetched}}/drones/{{droneFetched._id}}/edit{{else}}/drones/create{{/if}}" method="POST">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" id="name" name="name" {{#if droneFetched}} value="{{droneFetched.name}}"{{/if}}>
+        <label for="propellers">Propellers</label>
+        <input class="form-control" type="number" id="propellers" name="propellers" {{#if droneFetched}} value="{{droneFetched.propellers}}"{{/if}}>
+        <label for="maxSpeed">Max speed</label>
+        <input class="form-control" type="number" id="maxSpeed" name="maxSpeed" {{#if droneFetched}} value="{{droneFetched.maxSpeed}}"{{/if}}>
+        <button class="btn btn-primary">{{#if droneFetched}}Modify{{else}}Create{{/if}}</button>
+        </form>
+    </div>
+
+</div>
+
 

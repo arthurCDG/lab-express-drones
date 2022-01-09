@@ -1,8 +1,57 @@
 body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
-a {
-  color: #00b7ff;
+h1,
+h2,
+h3,
+p {
+  padding: 20px 0 20px 50px;
+}
+
+.fa {
+  width: 30px;
+}
+
+nav {
+  height: 10vh;
+}
+
+#drones-list-main-container,
+#home-main-container,
+#crud-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#drones-list-individual-container {
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+}
+
+#home-main-container {
+  height: 90vh;
+  width: 100vw;
+  background-image: url("../images/aaron-burden-0fA3gVTGwjQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#crud-form-container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form label,
+form button {
+  margin: 10px 0;
 }
